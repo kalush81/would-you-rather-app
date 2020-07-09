@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
-import { getInitialData } from "./utils/api";
+import { useDispatch } from 'react-redux';
+import handleInitialData from './actions/shared';
 
 function App() {
+  const dispatch = useDispatch()
   useEffect(() => {
-    getInitialData().then(({ users, questions }) => {
-      console.log("initial users: ", users);
-      console.log("initial questions: ", questions);
-    });
+    dispatch(handleInitialData())
   }, []);
   return <div className="App"></div>;
 }
