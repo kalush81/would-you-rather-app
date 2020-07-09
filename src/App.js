@@ -1,14 +1,14 @@
-import React from 'react';
-import './App.css';
+import React, { useEffect } from "react";
+import { getInitialData } from "./utils/api";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        
-      </header>
-    </div>
-  );
+  useEffect(() => {
+    getInitialData().then(({ users, questions }) => {
+      console.log("initial users: ", users);
+      console.log("initial questions: ", questions);
+    });
+  }, []);
+  return <div className="App"></div>;
 }
 
 export default App;
