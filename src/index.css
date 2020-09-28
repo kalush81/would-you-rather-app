@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400&display=swap');
 
 body {
+  box-sizing: border-box;
   margin: 0;
   font-family: 'Titillium Web', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -14,5 +15,99 @@ code {
     monospace;
 }
 
+.user-select {
+  text-align: center;
+}
+.user-select, .game-name {
+  display: block;
+  width: 40%;
+}
+header.container {
+  margin: auto;
+  max-width: 960px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid red;
+}
 
+.wrapper {
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9));
+}
 
+.question-box {
+  max-width: 900px;
+  width: 80%;
+  height: 280px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.question-box::after {
+  content: 'or';
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 2px solid whitesmoke;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*transform: translateY(-50%); */
+  bottom: 50%;
+  text-align: center;
+  background: black;
+  color: aliceblue;
+}
+.question-box p {
+  text-shadow: 1px 1px 4px rgb(149, 149, 149);
+  letter-spacing: 1px;
+}
+.blue, .red {
+  width: 48%;
+  border: 2px solid black;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px pink;
+}
+.blue:hover, .red:hover {
+  opacity: 0.9;
+}
+.blue {
+  background: linear-gradient(blue, #9198e5);
+}
+.red {
+  background: linear-gradient(#e66465, red);
+}
+.or {
+  align-self: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.text-center {
+  padding-top: 20px;
+  width: 250px;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 24px;
+  text-transform: uppercase;
+  display: block;
+  margin: auto;
+}
+.text-center::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(0.25turn, #ddcfcf, rgba(255, 0, 0, 0.63));
+}
+.text-center p {
+  margin-top: 0;
+  text-shadow: 1px 1px 2px pink;
+}
